@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculty Dashboard | AI Resume Analyzer</title>
+
+<link rel="stylesheet" href="faculty.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>Faculty Panel</h2>
+
+<ul>
+
+<li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> ATS Dashboard</a></li>
+
+<li><a href="#"><i class="fa-solid fa-users"></i> Students</a></li>
+
+<li><a href="#"><i class="fa-solid fa-file-arrow-down"></i> Reports</a></li>
+
+<li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main">
+
+<h1>Faculty Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>150</h2>
+
+<p>Total Students</p>
+
+</div>
+
+<div class="card">
+
+<h2>82%</h2>
+
+<p>Average ATS Score</p>
+
+</div>
+
+</div>
+
+<div class="search">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Student..."
+onkeyup="searchStudent()">
+
+</div>
+
+<div class="table-box">
+
+<table id="studentTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Department</th>
+
+<th>ATS Score</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>101</td>
+
+<td>Jensi Patel</td>
+
+<td>IT</td>
+
+<td>89%</td>
+
+<td class="good">Excellent</td>
+
+</tr>
+
+<tr>
+
+<td>102</td>
+
+<td>Rahul Shah</td>
+
+<td>CSE</td>
+
+<td>75%</td>
+
+<td class="avg">Good</td>
+
+</tr>
+
+<tr>
+
+<td>103</td>
+
+<td>Priya Patel</td>
+
+<td>IT</td>
+
+<td>68%</td>
+
+<td class="need">Needs Improvement</td>
+
+</tr>
+
+<tr>
+
+<td>104</td>
+
+<td>Neha Joshi</td>
+
+<td>CE</td>
+
+<td>91%</td>
+
+<td class="good">Excellent</td>
+
+</tr>
+
+<tr>
+
+<td>105</td>
+
+<td>Amit Kumar</td>
+
+<td>AI</td>
+
+<td>80%</td>
+
+<td class="avg">Good</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<button class="download" onclick="downloadReport()">
+
+<i class="fa-solid fa-download"></i>
+
+Download Reports
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function downloadReport(){
+
+alert("Reports Downloaded Successfully!");
+
+}
+
+function searchStudent(){
+
+let input=document.getElementById("searchInput").value.toUpperCase();
+
+let table=document.getElementById("studentTable");
+
+let tr=table.getElementsByTagName("tr");
+
+for(let i=1;i<tr.length;i++){
+
+let td=tr[i].getElementsByTagName("td")[1];
+
+if(td){
+
+let txt=td.textContent || td.innerText;
+
+tr[i].style.display=txt.toUpperCase().indexOf(input)>-1 ? "" : "none";
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

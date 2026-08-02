@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATS Dashboard | AI Resume Analyzer</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<h2>AI Resume Analyzer</h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="upload.html">Upload Another Resume</a>
+<a href="faculty.html">Faculty</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="score-card">
+
+<h2>ATS Score</h2>
+
+<div class="circle">
+
+<div class="inner">
+
+<span>85%</span>
+
+</div>
+
+</div>
+
+<p>Your resume is ATS Friendly.</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3><i class="fa-solid fa-circle-check"></i> Skills Found</h3>
+
+<ul>
+
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Java</li>
+<li>Python</li>
+<li>SQL</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3><i class="fa-solid fa-circle-xmark"></i> Missing Skills</h3>
+
+<ul>
+
+<li>React</li>
+<li>Node.js</li>
+<li>AWS</li>
+<li>Docker</li>
+<li>GitHub Actions</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="tips">
+
+<h2>Resume Suggestions</h2>
+
+<ul>
+
+<li>Add more project descriptions.</li>
+
+<li>Include measurable achievements.</li>
+
+<li>Use ATS-friendly keywords.</li>
+
+<li>Add certifications.</li>
+
+<li>Improve professional summary.</li>
+
+</ul>
+
+</div>
+
+<div class="chart-box">
+
+<h2>Resume Statistics</h2>
+
+<div class="bars">
+
+<div class="bar html">
+<span>HTML</span>
+</div>
+
+<div class="bar css">
+<span>CSS</span>
+</div>
+
+<div class="bar js">
+<span>JavaScript</span>
+</div>
+
+<div class="bar java">
+<span>Java</span>
+</div>
+
+<div class="bar python">
+<span>Python</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="downloadReport()">
+<i class="fa-solid fa-download"></i>
+Download Report
+</button>
+
+<a href="upload.html">
+
+<button>
+
+Analyze Another Resume
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function downloadReport(){
+
+alert("Resume Report Downloaded Successfully!");
+
+}
+
+</script>
+
+</body>
+</html>
